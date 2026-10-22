@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding so text displays correctly -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile, tablet, and desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed in the browser tab -->
+    <title>GiveHub | Share More, Waste Less</title>
+
+    <!-- Connects the separate CSS file to this HTML page -->
+    <link rel="stylesheet" href="css/givehub.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER / NAVIGATION ================= -->
+    <header class="site-header">
+
+        <!-- Logo links back to the homepage -->
+        <a href="index.html" class="logo">
+            <span class="logo-icon">G+</span>
+            <span>Give<span class="logo-highlight">Hub</span></span>
+        </a>
+
+        <!-- Mobile menu button; JavaScript opens and closes the menu -->
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- Main navigation links to separate HTML pages -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="how-it-works.html" class="nav-link">How It Works</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="login.html" class="nav-link">Login</a>
+
+            <!-- Registration button opens the registration page -->
+            <a href="register.html" class="nav-register">
+                Join GiveHub
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <main>
+
+        <section class="hero">
+
+            <!-- Left side: main heading and action buttons -->
+            <div class="hero-content">
+
+                <!-- Small introductory label -->
+                <p class="eyebrow">
+                    SMALL ACTS. BIGGER IMPACT.
+                </p>
+
+                <!-- Main homepage heading -->
+                <h1>
+                    Your extra can be
+                    <span>someone else's enough.</span>
+                </h1>
+
+                <!-- Brief explanation of the GiveHub mission -->
+                <p class="hero-description">
+                    Give food, clothes, books and essentials a second life.
+                    Connect with people who need them and make every
+                    contribution count.
+                </p>
+
+                <!-- Main actions take users to the login page for now -->
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary">
+                        Donate Now <span>→</span>
+                    </a>
+
+                    <a href="login.html" class="btn btn-secondary">
+                        Request Resources
+                    </a>
+                </div>
+
+                <!-- Small trust-building message -->
+                <p class="hero-note">
+                    Made for sharing. Built for communities.
+                </p>
+            </div>
+
+            <!-- Right side: real photograph from Unsplash -->
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1100&q=85"
+                    alt="Community members helping children"
+                >
+
+                <!-- Decorative information card over the photo -->
+                <div class="image-note">
+                    <span class="note-icon">♡</span>
+                    <div>
+                        <strong>Every contribution matters</strong>
+                        <p>Give what you can. Help where it counts.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESOURCE CATEGORIES ================= -->
+        <section class="categories section-padding">
+
+            <!-- Section heading -->
+            <div class="section-heading">
+                <p class="eyebrow">GIVE WHAT YOU CAN</p>
+                <h2>One platform. Many ways to help.</h2>
+                <p>
+                    Choose a resource category and help useful items
+                    reach the people who need them.
+                </p>
+            </div>
+
+            <!-- Cards for the four main resource categories -->
+            <div class="category-grid">
+
+                <!-- Food category -->
+                <a href="browse-donations.html?category=food"
+                   class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                        alt="A fresh meal"
+                        loading="lazy"
+                    >
+                    <div class="category-info">
+                        <span class="category-number">01</span>
+                        <h3>Food</h3>
+                        <p>Share fresh meals and surplus food.</p>
+                        <span class="card-link">Explore resources →</span>
+                    </div>
+                </a>
+
+                <!-- Clothing category -->
+                <a href="browse-donations.html?category=clothes"
+                   class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=700&q=80"
+                        alt="Clothes ready to wear"
+                        loading="lazy"
+                    >
+                    <div class="category-info">
+                        <span class="category-number">02</span>
+                        <h3>Clothing</h3>
+                        <p>Pass on wearable clothes to others.</p>
+                        <span class="card-link">Explore resources →</span>
+                    </div>
+                </a>
+
+                <!-- Books category -->
+                <a href="browse-donations.html?category=books"
+                   class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=700&q=80"
+                        alt="Books on library shelves"
+                        loading="lazy"
+                    >
+                    <div class="category-info">
+                        <span class="category-number">03</span>
+                        <h3>Books</h3>
+                        <p>Help knowledge reach more learners.</p>
+                        <span class="card-link">Explore resources →</span>
+                    </div>
+                </a>
+
+                <!-- Electronics category -->
+                <a href="browse-donations.html?category=electronics"
+                   class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=700&q=80"
+                        alt="Electronic devices"
+                        loading="lazy"
+                    >
+                    <div class="category-info">
+                        <span class="category-number">04</span>
+                        <h3>Electronics</h3>
+                        <p>Give useful devices another purpose.</p>
+                        <span class="card-link">Explore resources →</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- ================= HOW IT WORKS PREVIEW ================= -->
+        <section class="how-section section-padding">
+
+            <div class="section-heading">
+                <p class="eyebrow">SIMPLE BY DESIGN</p>
+                <h2>Good things happen in three steps.</h2>
+                <p>
+                    GiveHub connects donors, recipients and volunteers
+                    through one straightforward process.
+                </p>
+            </div>
+
+            <!-- Three steps explaining the platform -->
+            <div class="steps-grid">
+
+                <article class="step-card">
+                    <span class="step-number">01</span>
+                    <div class="step-icon">♡</div>
+                    <h3>Share a resource</h3>
+                    <p>
+                        Donors list available food, clothing, books
+                        or other useful items.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">02</span>
+                    <div class="step-icon">⌕</div>
+                    <h3>Find the right match</h3>
+                    <p>
+                        The platform considers category, quantity,
+                        location and urgency.
+                    </p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number">03</span>
+                    <div class="step-icon">↗</div>
+                    <h3>Deliver with care</h3>
+                    <p>
+                        Arrange pickup or delivery and confirm
+                        when the resource reaches its recipient.
+                    </p>
+                </article>
+
+            </div>
+
+            <!-- Opens the full How It Works page -->
+            <div class="center-action">
+                <a href="how-it-works.html" class="text-link">
+                    Discover how GiveHub works →
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================= IMPACT STATISTICS ================= -->
+        <section class="impact-section">
+
+            <div class="impact-content">
+                <p class="eyebrow">OUR PURPOSE</p>
+                <h2>Less waste. More possibilities.</h2>
+                <p>
+                    Useful resources should not go to waste while
+                    people are looking for the things they need.
+                    GiveHub aims to bring these two sides together.
+                </p>
+                <a href="about.html" class="btn btn-light">
+                    Our Mission →
+                </a>
+            </div>
+
+            <!-- These are illustrative figures, not live database totals -->
+            <div class="impact-grid">
+
+                <div class="impact-item">
+                    <strong>01</strong>
+                    <span>Resource-sharing platform</span>
+                </div>
+
+                <div class="impact-item">
+                    <strong>24/7</strong>
+                    <span>Designed for easy access</span>
+                </div>
+
+                <div class="impact-item">
+                    <strong>04+</strong>
+                    <span>Core resource categories</span>
+                </div>
+
+                <div class="impact-item">
+                    <strong>1 Goal</strong>
+                    <span>Help resources reach people</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= FINAL CALL TO ACTION ================= -->
+        <section class="cta-section section-padding">
+            <p class="eyebrow">BE PART OF THE CHANGE</p>
+            <h2>Someone nearby might need what you no longer do.</h2>
+            <p>
+                Join a community where sharing becomes easier
+                and every useful resource has another chance.
+            </p>
+
+            <!-- Both buttons open the login page at this stage -->
+            <div class="hero-buttons centered-buttons">
+                <a href="login.html" class="btn btn-primary">
+                    Start Donating →
+                </a>
+
+                <a href="register.html" class="btn btn-secondary">
+                    Create an Account
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <!-- Footer logo and mission -->
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-icon">G+</span>
+                    <span>Give<span class="logo-highlight">Hub</span></span>
+                </a>
+
+                <p>
+                    Connecting useful resources with people
+                    and communities who need them.
+                </p>
+            </div>
+
+            <!-- Quick navigation links -->
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <a href="index.html">Home</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About Us</a>
+            </div>
+
+            <!-- Account-related links -->
+            <div class="footer-column">
+                <h3>Get Involved</h3>
+                <a href="login.html">Donate</a>
+                <a href="login.html">Request Resources</a>
+                <a href="register.html">Become a Volunteer</a>
+            </div>
+
+        </div>
+
+        <!-- Bottom copyright line -->
+        <div class="footer-bottom">
+            <p>© 2026 GiveHub. Share more. Waste less.</p>
+            <p>Built to make giving easier.</p>
+        </div>
+
+    </footer>
+
+
+    <!-- Loads the separate JavaScript file after the page content -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

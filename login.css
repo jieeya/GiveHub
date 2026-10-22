@@ -1,0 +1,472 @@
+
+/* ================= GENERAL SETTINGS ================= */
+
+/* Makes width calculations easier for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic page appearance */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf6;
+    color: #263044;
+    line-height: 1.6;
+}
+
+/* Removes the default underline from links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= HEADER ================= */
+
+.site-header {
+    min-height: 82px;
+    padding: 16px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: #ffffff;
+    border-bottom: 1px solid #f0e7e1;
+}
+
+/* GiveHub logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo-icon,
+.form-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #f16f61;
+    color: white;
+    font-weight: 800;
+}
+
+.logo-highlight {
+    color: #f16f61;
+}
+
+/* Navigation links */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555b68;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ed6b5d;
+}
+
+.nav-register {
+    padding: 11px 19px;
+    border-radius: 9px;
+    background: #f16f61;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-register:hover,
+.login-button:hover {
+    background: #db5c50;
+}
+
+/* Hidden on desktop; shown on mobile */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* ================= MAIN LOGIN LAYOUT ================= */
+
+.login-page {
+    min-height: calc(100vh - 145px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Left side of the login page */
+.login-intro {
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 70px 14%;
+    color: white;
+
+    /* Food donation photograph with a dark overlay */
+    background:
+        linear-gradient(
+            rgba(36, 39, 51, 0.76),
+            rgba(36, 39, 51, 0.83)
+        ),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.intro-content {
+    max-width: 500px;
+}
+
+/* Small heading above the main title */
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #ffc0a9;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Main welcome heading */
+.login-intro h1 {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1.16;
+    letter-spacing: -1.5px;
+}
+
+.login-intro h1 span {
+    color: #ffb09a;
+}
+
+/* Introductory paragraph */
+.login-intro > .intro-content > p {
+    max-width: 440px;
+    margin-bottom: 38px;
+    color: #f0e8e6;
+    font-size: 16px;
+}
+
+/* List of benefits */
+.login-benefits {
+    display: grid;
+    gap: 24px;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #ffb09a;
+    font-size: 24px;
+}
+
+.benefit h3 {
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.benefit p {
+    color: #e0d8d7;
+    font-size: 13px;
+}
+
+/* ================= LOGIN FORM ================= */
+
+.login-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 8%;
+    background: #fffaf6;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+}
+
+/* Form heading */
+.form-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.form-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 18px;
+    border-radius: 15px;
+    font-size: 23px;
+}
+
+.form-heading h2 {
+    margin-bottom: 8px;
+    color: #263044;
+    font-size: 30px;
+    letter-spacing: -0.7px;
+}
+
+.form-heading p {
+    color: #777b85;
+    font-size: 14px;
+}
+
+/* Each form field */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #343a49;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Email and password inputs */
+.form-group input {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 14px;
+    border: 1px solid #e4dcd6;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #263044;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: #f16f61;
+    box-shadow: 0 0 0 3px rgba(241, 111, 97, 0.12);
+}
+
+/* Forgot password link and password label */
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.password-label a {
+    margin-bottom: 8px;
+    color: #e56558;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Positions the Show/Hide button inside the password field */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #e56558;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Remember me checkbox */
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 2px 0 25px;
+    color: #626774;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.remember-option input {
+    accent-color: #f16f61;
+    width: 15px;
+    height: 15px;
+}
+
+/* Main login button */
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 51px;
+    border: none;
+    border-radius: 9px;
+    background: #f16f61;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.login-button span {
+    font-size: 20px;
+}
+
+/* Messages displayed by JavaScript */
+.form-message {
+    min-height: 22px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Registration link */
+.register-prompt {
+    margin-top: 25px;
+    text-align: center;
+    color: #747985;
+    font-size: 13px;
+}
+
+.register-prompt a {
+    color: #e56558;
+    font-weight: 700;
+}
+
+.security-note {
+    margin-top: 28px;
+    color: #99949a;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* ================= FOOTER ================= */
+
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 7%;
+    border-top: 1px solid #f0e7e1;
+    background: white;
+    color: #777b85;
+    font-size: 12px;
+}
+
+.login-footer a {
+    color: #e56558;
+    font-weight: 700;
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+
+@media (max-width: 900px) {
+    .site-header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .login-intro {
+        padding: 55px 8%;
+    }
+
+    .login-form-section {
+        padding: 45px 7%;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Stack the two sections vertically on smaller screens */
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .login-intro {
+        min-height: 440px;
+        padding: 55px 8%;
+    }
+
+    .login-intro h1 {
+        font-size: 39px;
+    }
+
+    .login-form-section {
+        padding: 50px 7%;
+    }
+
+    /* Turn navigation into a dropdown menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-header {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .nav-link,
+    .nav-register {
+        display: block;
+        padding: 12px 5px;
+    }
+
+    .nav-register {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .login-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

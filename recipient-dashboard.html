@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Dashboard | GiveHub</title>
+    <link rel="stylesheet" href="css/recipient-dashboard.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="request-resource.html">Request Resources</a>
+        </nav>
+    </header>
+
+    <section class="welcome">
+        <p class="eyebrow">RECIPIENT PORTAL</p>
+        <h1>Welcome Back!</h1>
+        <p>Find the resources you need and keep track of your requests.</p>
+    </section>
+
+    <main class="container">
+
+        <!-- Dashboard statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <span class="stat-icon">📋</span>
+                <p>My Requests</p>
+                <h2 id="requestCount">3</h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🤝</span>
+                <p>Matched Requests</p>
+                <h2 id="matchedCount">1</h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <p>Resources Received</p>
+                <h2 id="receivedCount">1</h2>
+            </div>
+        </section>
+
+        <!-- Quick actions -->
+        <section class="quick-actions">
+            <div>
+                <h2>What do you need today?</h2>
+                <p>Explore available resources or submit a new request.</p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="browse-donations.html" class="button secondary">
+                    Browse Donations
+                </a>
+
+                <a href="request-resource.html" class="button primary">
+                    + Request a Resource
+                </a>
+            </div>
+        </section>
+
+        <!-- Available resources -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <h2>Explore Resources</h2>
+                    <p>Discover different types of available support.</p>
+                </div>
+            </div>
+
+            <div class="resource-grid">
+                <a href="browse-donations.html?category=Food" class="resource-card">
+                    <div class="resource-icon food">🍱</div>
+                    <h3>Food</h3>
+                    <p>Meals and essential food supplies</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="browse-donations.html?category=Clothes" class="resource-card">
+                    <div class="resource-icon clothes">👕</div>
+                    <h3>Clothes</h3>
+                    <p>Clothing for different age groups</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="browse-donations.html?category=Books" class="resource-card">
+                    <div class="resource-icon books">📚</div>
+                    <h3>Books</h3>
+                    <p>Study materials and educational books</p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="browse-donations.html?category=Electronics" class="resource-card">
+                    <div class="resource-icon electronics">💻</div>
+                    <h3>Electronics</h3>
+                    <p>Useful electronic items and devices</p>
+                    <span>Explore →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- My requests -->
+        <section class="section">
+            <div class="section-heading">
+                <div>
+                    <h2>My Recent Requests</h2>
+                    <p>Check the progress of your resource requests.</p>
+                </div>
+
+                <a href="request-resource.html" class="text-link">
+                    New Request +
+                </a>
+            </div>
+
+            <div class="request-list" id="requestList">
+
+                <article class="request-card" data-status="Matched">
+                    <div class="request-icon">📚</div>
+
+                    <div class="request-details">
+                        <h3>School Books</h3>
+                        <p>Quantity: 5 books</p>
+                        <small>Request ID: RH001</small>
+                    </div>
+
+                    <span class="status matched">Matched</span>
+                </article>
+
+                <article class="request-card" data-status="Pending">
+                    <div class="request-icon">👕</div>
+
+                    <div class="request-details">
+                        <h3>Clothes for Family</h3>
+                        <p>Quantity: 4 sets</p>
+                        <small>Request ID: RH002</small>
+                    </div>
+
+                    <span class="status pending">Pending</span>
+                </article>
+
+                <article class="request-card" data-status="Received">
+                    <div class="request-icon">🍱</div>
+
+                    <div class="request-details">
+                        <h3>Food Supplies</h3>
+                        <p>Quantity: 1 food package</p>
+                        <small>Request ID: RH003</small>
+                    </div>
+
+                    <span class="status received">Received</span>
+                </article>
+
+            </div>
+        </section>
+
+        <p class="demo-note">
+            These are sample records for the front-end demonstration.
+            Your real requests will be loaded from the database later.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 GiveHub | Small Acts, Meaningful Change.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/recipient-dashboard.js"></script>
+
+</body>
+</html>

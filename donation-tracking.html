@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Tracking | GiveHub</title>
+    <link rel="stylesheet" href="css/donation-tracking.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="recipient-dashboard.html">Dashboard</a>
+            <a href="my-requests.html">My Requests</a>
+            <a href="login.html" class="login-link">Log In</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <p class="eyebrow">TRANSPARENT GIVING</p>
+            <h1>Track Your <span>Donation</span></h1>
+            <p>
+                Follow each stage of the donation journey and see
+                the latest progress of your requested resources.
+            </p>
+        </section>
+
+        <!-- Tracking search -->
+        <section class="search-panel">
+            <div>
+                <h2>Find a Donation</h2>
+                <p>Enter your tracking ID to view its progress.</p>
+            </div>
+
+            <form id="trackingForm" class="tracking-form">
+                <input
+                    type="text"
+                    id="trackingInput"
+                    placeholder="Example: GH-T001"
+                    aria-label="Donation tracking ID"
+                    required
+                >
+                <button type="submit">Track Donation</button>
+            </form>
+
+            <p id="searchMessage" class="search-message" aria-live="polite">
+                Demo tracking ID: GH-T001
+            </p>
+        </section>
+
+        <!-- Tracking information -->
+        <section id="trackingContent">
+
+            <div class="tracking-title-row">
+                <div>
+                    <p class="eyebrow">CURRENT TRACKING</p>
+                    <h2 id="donationName">Food Donation Package</h2>
+                    <p class="tracking-id">
+                        Tracking ID: <strong id="trackingId">GH-T001</strong>
+                    </p>
+                </div>
+
+                <span id="overallStatus" class="status-badge in-transit">
+                    In Transit
+                </span>
+            </div>
+
+            <!-- Progress summary -->
+            <section class="progress-card">
+                <div class="progress-top">
+                    <div>
+                        <p class="small-label">Delivery progress</p>
+                        <h3 id="progressTitle">On its way to the recipient</h3>
+                    </div>
+
+                    <strong id="progressPercentage">75%</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar" class="progress-fill"></div>
+                </div>
+
+                <div class="progress-labels">
+                    <span>Requested</span>
+                    <span>Approved</span>
+                    <span>Picked Up</span>
+                    <span>Delivered</span>
+                </div>
+            </section>
+
+            <!-- Donation overview -->
+            <section class="overview-grid">
+
+                <article class="overview-card">
+                    <span class="overview-icon">📦</span>
+                    <div>
+                        <p>Item</p>
+                        <h3 id="itemName">Food Packets</h3>
+                    </div>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-icon">📍</span>
+                    <div>
+                        <p>Destination</p>
+                        <h3 id="destination">Jaipur, Rajasthan</h3>
+                    </div>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-icon">🚚</span>
+                    <div>
+                        <p>Delivery Partner</p>
+                        <h3 id="deliveryPartner">Volunteer</h3>
+                    </div>
+                </article>
+
+                <article class="overview-card">
+                    <span class="overview-icon">🗓️</span>
+                    <div>
+                        <p>Estimated Delivery</p>
+                        <h3 id="deliveryDate">24 October 2026</h3>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- Timeline -->
+            <section class="timeline-panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Delivery Timeline</h2>
+                        <p>See the progress recorded for this donation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+
+                    <article class="timeline-item completed-step">
+                        <div class="timeline-marker">✓</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">
+                                <h3>Request Submitted</h3>
+                                <span>Completed</span>
+                            </div>
+                            <p>
+                                The recipient's request has been received
+                                by the platform.
+                            </p>
+                            <small>22 October 2026 · 10:00 AM</small>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item completed-step">
+                        <div class="timeline-marker">✓</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">
+                                <h3>Request Approved</h3>
+                                <span>Completed</span>
+                            </div>
+                            <p>
+                                The donation has been matched with
+                                the recipient's request.
+                            </p>
+                            <small>22 October 2026 · 11:30 AM</small>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item completed-step">
+                        <div class="timeline-marker">✓</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">
+                                <h3>Donation Picked Up</h3>
+                                <span>Completed</span>
+                            </div>
+                            <p>
+                                The assigned delivery volunteer has
+                                collected the donation.
+                            </p>
+                            <small>23 October 2026 · 09:00 AM</small>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item active-step">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">
+                                <h3>Out for Delivery</h3>
+                                <span>In Progress</span>
+                            </div>
+                            <p>
+                                The donation is on its way to the
+                                recipient's destination.
+                            </p>
+                            <small>Awaiting delivery confirmation</small>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item upcoming-step">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">
+                                <h3>Successfully Delivered</h3>
+                                <span>Upcoming</span>
+                            </div>
+                            <p>
+                                Delivery will be marked complete once
+                                the recipient receives the items.
+                            </p>
+                            <small>Awaiting confirmation</small>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Help section -->
+            <section class="help-card">
+                <div>
+                    <h2>Need help with this delivery?</h2>
+                    <p>
+                        If a tracking update looks incorrect, contact
+                        the GiveHub team for assistance.
+                    </p>
+                </div>
+
+                <a href="notifications.html" class="help-button">
+                    View Notifications
+                </a>
+            </section>
+
+        </section>
+
+        <div id="notFound" class="not-found" hidden>
+            <h2>Tracking ID not found</h2>
+            <p>
+                Please check your ID and try again.
+                For this demonstration, use <strong>GH-T001</strong>.
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+        <p>Every donation deserves a transparent journey.</p>
+        <p class="copyright">© 2026 GiveHub · Student project demonstration</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/donation-tracking.js"></script>
+
+</body>
+</html>

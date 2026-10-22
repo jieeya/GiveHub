@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | GiveHub</title>
+
+    <!-- Notifications page CSS -->
+    <link rel="stylesheet" href="css/notifications.css">
+
+    <!-- Font for the page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+        <a href="givehub.html" class="brand">
+            <span class="brand-icon">G</span>
+            <span>Give<span class="brand-highlight">Hub</span></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="recipient-dashboard.html">Dashboard</a>
+        </nav>
+
+        <a href="login.html" class="profile-link">My Account</a>
+    </header>
+
+
+    <!-- Main Page -->
+    <main class="page-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">YOUR GIVEHUB UPDATES</p>
+                <h1>Notifications <span class="heading-icon">🔔</span></h1>
+                <p class="heading-description">
+                    Stay updated on your donations, requests, pickups and deliveries.
+                </p>
+            </div>
+
+            <button type="button" id="markAllReadBtn" class="mark-all-btn">
+                ✓ Mark all as read
+            </button>
+        </section>
+
+
+        <!-- Notification Summary -->
+        <section class="summary-card">
+            <div class="summary-icon">✉</div>
+
+            <div class="summary-text">
+                <h2>You are all caught up with your updates.</h2>
+                <p>
+                    You have <strong id="unreadCount">0 unread notifications</strong>.
+                </p>
+            </div>
+
+            <div class="summary-decoration">✦</div>
+        </section>
+
+
+        <!-- Filters -->
+        <section class="notification-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Your Activity</h2>
+                    <p>Important updates about your GiveHub activity.</p>
+                </div>
+
+                <span class="total-count" id="totalCount">0 updates</span>
+            </div>
+
+
+            <div class="filter-bar" role="group" aria-label="Filter notifications">
+                <button type="button" class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="requests">
+                    Requests
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="donations">
+                    Donations
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="delivery">
+                    Delivery
+                </button>
+            </div>
+
+
+            <!-- JavaScript will display notifications here -->
+            <div id="notificationList" class="notification-list" aria-live="polite">
+            </div>
+
+
+            <!-- Shown when no notifications match the selected filter -->
+            <div id="emptyState" class="empty-state" hidden>
+                <div class="empty-icon">📭</div>
+                <h3>No notifications found</h3>
+                <p>Try another filter or check back for new updates.</p>
+                <button type="button" id="resetFilterBtn" class="reset-btn">
+                    Show all notifications
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Helpful Information -->
+        <section class="help-card">
+            <div class="help-icon">💡</div>
+
+            <div>
+                <h3>Stay connected with GiveHub</h3>
+                <p>
+                    Check your notifications regularly to keep track of requests,
+                    donation matches and delivery updates.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Back to Dashboard -->
+        <div class="back-link-container">
+            <a href="recipient-dashboard.html" class="back-link">
+                ← Back to Recipient Dashboard
+            </a>
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 GiveHub. Every contribution makes a difference.</p>
+    </footer>
+
+
+    <!-- Shared JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Notifications page JavaScript -->
+    <script src="js/notifications.js"></script>
+
+</body>
+</html>

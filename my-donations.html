@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Donations | GiveHub</title>
+    <link rel="stylesheet" href="css/my-donations.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="donor-dashboard.html">Dashboard</a>
+            <a href="post-donation.html" class="nav-button">+ Donate</a>
+        </nav>
+    </header>
+
+    <section class="page-heading">
+        <p class="eyebrow">YOUR CONTRIBUTION</p>
+        <h1>My <span>Donations</span></h1>
+        <p>Keep track of the resources you have shared with others.</p>
+    </section>
+
+    <main class="container">
+
+        <section class="stats">
+            <div class="stat-card">
+                <p>Total Donations</p>
+                <h2 id="totalCount">3</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>In Progress</p>
+                <h2 id="progressCount">2</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Successfully Delivered</p>
+                <h2 id="deliveredCount">1</h2>
+            </div>
+        </section>
+
+        <div class="section-header">
+            <div>
+                <h2>Your Donation History</h2>
+                <p>View the status of each donation below.</p>
+            </div>
+
+            <a href="post-donation.html" class="add-button">
+                + Post Donation
+            </a>
+        </div>
+
+        <div class="filters">
+            <label for="statusFilter">Filter by status:</label>
+
+            <select id="statusFilter">
+                <option value="All">All Donations</option>
+                <option value="Pending">Pending</option>
+                <option value="Matched">Matched</option>
+                <option value="Picked Up">Picked Up</option>
+                <option value="Delivered">Delivered</option>
+            </select>
+        </div>
+
+        <section class="donation-list" id="donationList">
+
+            <article class="donation-card" data-status="Delivered">
+                <div class="item-icon food">🍱</div>
+
+                <div class="donation-info">
+                    <h3>Freshly Prepared Meals</h3>
+                    <p>Category: Food · Quantity: 20 meals</p>
+                    <p class="location">📍 Jaipur, Rajasthan</p>
+                    <small>Donation ID: GH001</small>
+                </div>
+
+                <div class="donation-status">
+                    <span class="status delivered">Delivered</span>
+                    <a href="donation-tracking.html">Track Donation</a>
+                </div>
+            </article>
+
+            <article class="donation-card" data-status="Matched">
+                <div class="item-icon books">📚</div>
+
+                <div class="donation-info">
+                    <h3>School Books</h3>
+                    <p>Category: Books · Quantity: 15 items</p>
+                    <p class="location">📍 Jaipur, Rajasthan</p>
+                    <small>Donation ID: GH002</small>
+                </div>
+
+                <div class="donation-status">
+                    <span class="status matched">Matched</span>
+                    <a href="donation-tracking.html">Track Donation</a>
+                </div>
+            </article>
+
+            <article class="donation-card" data-status="Pending">
+                <div class="item-icon clothes">👕</div>
+
+                <div class="donation-info">
+                    <h3>Clothes for Families</h3>
+                    <p>Category: Clothes · Quantity: 10 items</p>
+                    <p class="location">📍 Jaipur, Rajasthan</p>
+                    <small>Donation ID: GH003</small>
+                </div>
+
+                <div class="donation-status">
+                    <span class="status pending">Pending</span>
+                    <a href="donation-tracking.html">Track Donation</a>
+                </div>
+            </article>
+
+        </section>
+
+        <p id="emptyMessage" hidden>
+            No donations found for this status.
+        </p>
+
+        <p class="demo-note">
+            Sample donations are displayed for design purposes.
+            Real donation records will be loaded from MySQL when
+            we connect the Flask backend.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 GiveHub | Small Acts, Meaningful Change.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/my-donations.js"></script>
+
+</body>
+</html>

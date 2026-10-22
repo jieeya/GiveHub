@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browse Donations | GiveHub</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="css/browse-donations.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="recipient-dashboard.html">Dashboard</a>
+            <a href="login.html" class="logout-link">Log In</a>
+        </nav>
+    </header>
+
+    <!-- Page heading -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <p class="eyebrow">GIVEHUB COMMUNITY</p>
+            <h1>Find What You <span>Need.</span></h1>
+            <p>
+                Explore available donations shared by generous people
+                and organizations in your community.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="main-container">
+
+        <section class="intro-row">
+            <div>
+                <h2>Available Donations</h2>
+                <p>Discover useful items and request what you need.</p>
+            </div>
+
+            <a href="request-resource.html" class="request-button">
+                Request Something +
+            </a>
+        </section>
+
+       
+<!-- Search and filters -->
+<section class="filter-panel">
+
+    <div class="search-box">
+        <span>⌕</span>
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search food, clothes, books..."
+        >
+    </div>
+
+    <div class="filter-controls">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="food">Food</option>
+            <option value="clothes">Clothes</option>
+            <option value="books">Books</option>
+            <option value="electronics">Electronics</option>
+            <option value="other">Other</option>
+        </select>
+
+        <select id="urgencyFilter">
+            <option value="all">Any Urgency</option>
+            <option value="urgent">Urgent</option>
+            <option value="normal">Normal</option>
+        </select>
+
+        <input
+            type="text"
+            id="locationFilter"
+            placeholder="Filter by city or area"
+        />
+
+        <select id="sortFilter">
+            <option value="newest">Newest First</option>
+            <option value="urgent">Most Urgent</option>
+        </select>
+
+        <button type="button" id="resetFilters" class="request-button">
+            Clear Filters
+        </button>
+    </div>
+
+</section>
+
+
+        <div class="results-row">
+            <p id="resultsCount">Showing donations</p>
+            <span class="sample-label">DEMO LISTINGS</span>
+        </div>
+
+        <!-- Donation cards -->
+        <section class="donation-grid" id="donationGrid">
+
+            <!-- Food donation -->
+           
+<article class="donation-card"
+    data-category="food"
+    data-urgency="urgent"
+    data-search="fresh vegetables food groceries tomatoes carrots"
+    data-location="Jaipur"
+    data-date="2026-10-23">
+
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+                        alt="Fresh vegetables"
+                    >
+                    <span class="category-badge">Food</span>
+                    <span class="urgency-badge urgent-badge">Urgent</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Community Food Donor</p>
+                    <h3>Fresh Vegetables</h3>
+                    <p class="description">
+                        Fresh seasonal vegetables available for families
+                        or community kitchens.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 8 kg available</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="Fresh Vegetables"
+                            data-category="Food"
+                            data-quantity="8 kg"
+                            data-location="Jaipur"
+                            data-description="Fresh seasonal vegetables available for families or community kitchens."
+                            data-urgency="Urgent">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Clothes donation -->
+            <article class="donation-card"
+                data-category="clothes"
+                data-urgency="normal"
+                data-search="clothes winter jackets sweaters clothing">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=80"
+                        alt="Clothing items"
+                    >
+                    <span class="category-badge">Clothes</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Individual Donor</p>
+                    <h3>Clothing Collection</h3>
+                    <p class="description">
+                        Clean clothes in good condition for people
+                        who need them.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 15 pieces</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="Clothing Collection"
+                            data-category="Clothes"
+                            data-quantity="15 pieces"
+                            data-location="Jaipur"
+                            data-description="Clean clothes in good condition for people who need them."
+                            data-urgency="Normal">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Books donation -->
+            <article class="donation-card"
+                data-category="books"
+                data-urgency="normal"
+                data-search="books textbooks school study educational">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80"
+                        alt="Books on library shelves"
+                    >
+                    <span class="category-badge">Books</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Student Donor</p>
+                    <h3>School Textbooks</h3>
+                    <p class="description">
+                        Previously used textbooks for students
+                        who need study materials.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 12 books</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="School Textbooks"
+                            data-category="Books"
+                            data-quantity="12 books"
+                            data-location="Jaipur"
+                            data-description="Previously used textbooks for students who need study materials."
+                            data-urgency="Normal">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Electronics donation -->
+            <article class="donation-card"
+                data-category="electronics"
+                data-urgency="urgent"
+                data-search="electronics laptop computer educational device">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
+                        alt="Laptop computer"
+                    >
+                    <span class="category-badge">Electronics</span>
+                    <span class="urgency-badge urgent-badge">Urgent Need</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Technology Donor</p>
+                    <h3>Used Laptop</h3>
+                    <p class="description">
+                        A pre-owned laptop for educational or
+                        basic computer learning purposes.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 1 device</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="Used Laptop"
+                            data-category="Electronics"
+                            data-quantity="1 device"
+                            data-location="Jaipur"
+                            data-description="A pre-owned laptop for educational or basic computer learning purposes."
+                            data-urgency="Urgent">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Food donation 2 -->
+            <article class="donation-card"
+                data-category="food"
+                data-urgency="normal"
+                data-search="packed food meals food packets">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                        alt="Prepared food"
+                    >
+                    <span class="category-badge">Food</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Local Food Partner</p>
+                    <h3>Food Packets</h3>
+                    <p class="description">
+                        Food packets available for distribution
+                        to people and families in need.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 10 packets</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="Food Packets"
+                            data-category="Food"
+                            data-quantity="10 packets"
+                            data-location="Jaipur"
+                            data-description="Food packets available for distribution to people and families in need."
+                            data-urgency="Normal">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Other donation -->
+            <article class="donation-card"
+                data-category="other"
+                data-urgency="normal"
+                data-search="stationery pens notebooks school supplies">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
+                        alt="Writing and stationery materials"
+                    >
+                    <span class="category-badge">Other</span>
+                </div>
+
+                <div class="card-content">
+                    <p class="donor-name">Community Donor</p>
+                    <h3>Study Supplies</h3>
+                    <p class="description">
+                        Notebooks and stationery for students
+                        and educational activities.
+                    </p>
+
+                    <div class="item-details">
+                        <span>📦 20 items</span>
+                        <span>📍 Jaipur</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <span class="status available">Available</span>
+                        <button class="details-button"
+                            data-title="Study Supplies"
+                            data-category="Other"
+                            data-quantity="20 items"
+                            data-location="Jaipur"
+                            data-description="Notebooks and stationery for students and educational activities."
+                            data-urgency="Normal">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- No results message -->
+        <div id="noResults" class="no-results" hidden>
+            <div class="empty-icon">⌕</div>
+            <h3>No donations found</h3>
+            <p>Try another search term or choose a different category.</p>
+            <button id="resetFilters" class="request-button">
+                Clear Filters
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Donation details popup -->
+    <div class="modal-overlay" id="detailsModal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true"
+            aria-labelledby="modalTitle">
+
+            <button class="modal-close" id="closeModal"
+                aria-label="Close details">&times;</button>
+
+            <p class="eyebrow">DONATION DETAILS</p>
+            <h2 id="modalTitle">Donation name</h2>
+            <p id="modalDescription"></p>
+
+            <div class="modal-info">
+                <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+                <p><strong>Quantity:</strong> <span id="modalQuantity"></span></p>
+                <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+                <p><strong>Urgency:</strong> <span id="modalUrgency"></span></p>
+            </div>
+
+            <a href="request-resource.html" class="request-button">
+                Go to Request Page
+            </a>
+            <p class="modal-note">
+                Demo listing only. This does not reserve the item.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+        <p>Small acts of giving can make a big difference.</p>
+        <p class="copyright">© 2026 GiveHub. Project demonstration.</p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="js/script.js"></script>
+    <script src="js/browse-donations.js"></script>
+
+</body>
+</html>

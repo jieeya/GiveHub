@@ -1,0 +1,1610 @@
+
+/* =====================================================
+   GIVEHUB HOME PAGE
+   This file controls the design of the website.
+   ===================================================== */
+
+
+/* ---------- 1. GLOBAL SETTINGS ---------- */
+
+/* Removes default browser spacing and makes sizing predictable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth movement when users click section links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main website colors and font settings */
+:root {
+    --navy: #17243b;
+    --coral: #f16d55;
+    --coral-dark: #d9533d;
+    --cream: #fbf7f0;
+    --white: #ffffff;
+    --muted: #707784;
+    --border: #e9e5df;
+    --soft-peach: #fff0e9;
+}
+
+/* Sets the default font and background for the whole website */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+/* Makes images fit inside their containers */
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Removes the default underline from links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Makes buttons use the same font as the website */
+button {
+    font: inherit;
+}
+
+
+/* ---------- 2. HEADER AND NAVIGATION ---------- */
+
+/* Keeps the navigation at the top of the screen */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Arranges the logo symbol and name side by side */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Gives the logo symbol its coral background */
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+    background: var(--coral);
+    color: var(--white);
+    font-size: 19px;
+    letter-spacing: -1px;
+}
+
+/* Highlights Hub in the logo */
+.logo-highlight {
+    color: var(--coral);
+}
+
+/* Arranges all navigation links in a row */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Default navigation link appearance */
+.nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #626b79;
+    transition: color 0.2s ease;
+}
+
+/* Changes the link color when hovered or active */
+.nav-link:hover,
+.nav-link.active {
+    color: var(--coral-dark);
+}
+
+/* Styles the Join GiveHub button */
+.nav-register {
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+/* Gives the registration button a hover effect */
+.nav-register:hover {
+    background: var(--coral-dark);
+}
+
+/* Hides the mobile menu button on large screens */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--navy);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* ---------- 3. HERO SECTION ---------- */
+
+/* Places the text and photograph side by side */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+    padding: 80px 7%;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+/* Prevents the text column from becoming too wide */
+.hero-content {
+    max-width: 590px;
+}
+
+/* Small uppercase labels above section headings */
+.eyebrow {
+    color: var(--coral-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 17px;
+}
+
+/* Large main heading */
+.hero h1 {
+    font-size: clamp(38px, 4.2vw, 61px);
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    margin-bottom: 23px;
+}
+
+/* Highlights the second part of the hero heading */
+.hero h1 span {
+    display: block;
+    color: var(--coral);
+}
+
+/* Paragraph beneath the main heading */
+.hero-description {
+    max-width: 500px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* Arranges the hero buttons horizontally */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Shared button styling */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 49px;
+    padding: 13px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Moves buttons slightly upward when hovered */
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Main coral action button */
+.btn-primary {
+    background: var(--coral);
+    color: var(--white);
+}
+
+/* Darkens the main button on hover */
+.btn-primary:hover {
+    background: var(--coral-dark);
+}
+
+/* Secondary outlined button */
+.btn-secondary {
+    border: 1px solid #d9d4cc;
+    color: var(--navy);
+    background: transparent;
+}
+
+/* Adds a soft background to the secondary button */
+.btn-secondary:hover {
+    background: var(--white);
+}
+
+/* Small note below the buttons */
+.hero-note {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Gives the hero image a large, rounded shape */
+.hero-image {
+    position: relative;
+    min-width: 0;
+}
+
+/* Controls the hero photograph size */
+.hero-image > img {
+    height: 455px;
+    border-radius: 22px;
+    object-position: center;
+}
+
+/* Floating information card over the hero image */
+.image-note {
+    position: absolute;
+    bottom: 22px;
+    left: -28px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(23, 36, 59, 0.12);
+}
+
+/* Circular icon inside the floating card */
+.note-icon {
+    display: grid;
+    place-items: center;
+    min-width: 42px;
+    height: 42px;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+/* Floating card title */
+.image-note strong {
+    font-size: 13px;
+}
+
+/* Floating card description */
+.image-note p {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ---------- 4. SHARED SECTION SPACING ---------- */
+
+/* Gives sections consistent top and bottom spacing */
+.section-padding {
+    padding: 85px 7%;
+}
+
+/* Centers section headings */
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+/* Section titles */
+.section-heading h2,
+.impact-content h2,
+.cta-section h2 {
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    margin-bottom: 15px;
+}
+
+/* Descriptions beneath section titles */
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ---------- 5. RESOURCE CATEGORY CARDS ---------- */
+
+/* Creates a four-column category layout */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Card appearance */
+.category-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+/* Lifts the category card when hovered */
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(23, 36, 59, 0.09);
+}
+
+/* Controls the category photograph height */
+.category-card > img {
+    height: 185px;
+    transition: transform 0.35s ease;
+}
+
+/* Slightly enlarges the image on hover */
+.category-card:hover > img {
+    transform: scale(1.04);
+}
+
+/* Keeps the text area above the image's overflow */
+.category-info {
+    position: relative;
+    padding: 20px;
+    background: var(--white);
+}
+
+/* Small number on each category card */
+.category-number {
+    color: var(--coral-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Category heading */
+.category-info h3 {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    font-size: 20px;
+}
+
+/* Category description */
+.category-info p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 42px;
+}
+
+/* Link-style text at the bottom of the card */
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--coral-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ---------- 6. HOW IT WORKS SECTION ---------- */
+
+/* Adds a different background to separate this section */
+.how-section {
+    background: #f8f8fa;
+}
+
+/* Creates three equal columns for the steps */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Individual step card */
+.step-card {
+    position: relative;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+/* Step number in the top-right corner */
+.step-number {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    color: #c9cbd1;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Icon block inside each step */
+.step-icon {
+    display: grid;
+    place-items: center;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 23px;
+    border-radius: 13px;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    font-size: 28px;
+}
+
+/* Step heading */
+.step-card h3 {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+/* Step description */
+.step-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Centers the link below the three cards */
+.center-action {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* Link styling */
+.text-link {
+    color: var(--coral-dark);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* ---------- 7. IMPACT SECTION ---------- */
+
+/* Dark background creates a strong visual contrast */
+.impact-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 75px 7%;
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* Uses a lighter label on the dark background */
+.impact-content .eyebrow {
+    color: #ffad98;
+}
+
+/* Impact description */
+.impact-content > p:not(.eyebrow) {
+    max-width: 450px;
+    margin: 20px 0 25px;
+    color: #c4cbd5;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Light-colored button for dark background */
+.btn-light {
+    background: var(--white);
+    color: var(--navy);
+}
+
+/* Adds coral text on hover */
+.btn-light:hover {
+    color: var(--coral-dark);
+}
+
+/* Arranges the impact items in two columns */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* Individual impact item */
+.impact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 125px;
+    padding: 22px;
+    border: 1px solid #39465c;
+    border-radius: 12px;
+    background: #202f48;
+}
+
+/* Large value in each impact card */
+.impact-item strong {
+    color: #ff9a82;
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+/* Caption beneath the value */
+.impact-item span {
+    margin-top: 9px;
+    color: #d0d6df;
+    font-size: 12px;
+}
+
+
+/* ---------- 8. FINAL CALL TO ACTION ---------- */
+
+/* Centers the final invitation section */
+.cta-section {
+    text-align: center;
+    background: var(--cream);
+}
+
+/* Limits the width of the final heading */
+.cta-section h2 {
+    max-width: 700px;
+    margin: 0 auto 16px;
+}
+
+/* Final paragraph */
+.cta-section > p:not(.eyebrow) {
+    max-width: 600px;
+    margin: 0 auto 27px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Centers the final two buttons */
+.centered-buttons {
+    justify-content: center;
+}
+
+
+/* ---------- 9. FOOTER ---------- */
+
+/* Footer background and spacing */
+.site-footer {
+    padding: 55px 7% 0;
+    background: #121d30;
+    color: var(--white);
+}
+
+/* Arranges footer columns horizontally */
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 55px;
+    padding-bottom: 40px;
+}
+
+/* Footer logo text */
+.footer-logo {
+    color: var(--white);
+}
+
+/* Description under the footer logo */
+.footer-brand > p {
+    max-width: 290px;
+    margin-top: 18px;
+    color: #aeb8c8;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Footer column headings */
+.footer-column h3 {
+    margin-bottom: 17px;
+    font-size: 14px;
+}
+
+/* Footer navigation links */
+.footer-column a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 11px;
+    color: #aeb8c8;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+/* Footer link hover color */
+.footer-column a:hover {
+    color: #ff9a82;
+}
+
+/* Bottom footer row */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #354052;
+    color: #aeb8c8;
+    font-size: 11px;
+}
+
+
+/* ---------- 10. TABLET RESPONSIVE DESIGN ---------- */
+
+/* Changes the layout for medium-sized screens */
+@media (max-width: 1000px) {
+
+    /* Reduces navigation spacing */
+    .navbar {
+        gap: 17px;
+    }
+
+    /* Gives the hero columns more balanced space */
+    .hero {
+        gap: 35px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    /* Reduces the hero photograph height */
+    .hero-image > img {
+        height: 380px;
+    }
+
+    /* Uses two category columns on tablets */
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Reduces card image height */
+    .category-card > img {
+        height: 220px;
+    }
+
+    /* Reduces impact section spacing */
+    .impact-section {
+        gap: 30px;
+    }
+}
+
+
+/* ---------- 11. MOBILE RESPONSIVE DESIGN ---------- */
+
+/* Adjusts the website for phones */
+@media (max-width: 700px) {
+
+    /* Reduces header padding */
+    .site-header {
+        padding: 14px 5%;
+    }
+
+    /* Slightly reduces the logo size */
+    .logo {
+        font-size: 22px;
+    }
+
+    /* Displays the mobile menu button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hides the navigation until the menu is opened */
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 5% 20px;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 20px rgba(23, 36, 59, 0.07);
+    }
+
+    /* Shows the navigation when JavaScript adds this class */
+    .navbar.show-menu {
+        display: flex;
+    }
+
+    /* Makes each navigation link easier to tap */
+    .nav-link {
+        padding: 12px 0;
+    }
+
+    /* Gives the registration link space */
+    .nav-register {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    /* Changes hero to a single column */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 5%;
+    }
+
+    /* Makes the hero heading responsive */
+    .hero h1 {
+        font-size: clamp(36px, 10vw, 48px);
+        letter-spacing: -1.7px;
+    }
+
+    /* Reduces description font size */
+    .hero-description {
+        font-size: 14px;
+    }
+
+    /* Allows buttons to wrap on narrow screens */
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    /* Keeps the buttons comfortable to tap */
+    .btn {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+
+    /* Reduces image height on mobile */
+    .hero-image > img {
+        height: 310px;
+    }
+
+    /* Keeps the floating card within the image area */
+    .image-note {
+        left: 10px;
+        right: 10px;
+        bottom: 12px;
+        padding: 13px;
+    }
+
+    /* Reduces section spacing */
+    .section-padding {
+        padding: 60px 5%;
+    }
+
+    /* Uses two cards per row on phones */
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    /* Reduces category image height */
+    .category-card > img {
+        height: 140px;
+    }
+
+    /* Reduces the category card padding */
+    .category-info {
+        padding: 13px;
+    }
+
+    /* Adjusts category text for narrow cards */
+    .category-info h3 {
+        font-size: 17px;
+    }
+
+    .category-info p {
+        font-size: 11px;
+    }
+
+    .card-link {
+        font-size: 10px;
+    }
+
+    /* Stacks the process cards vertically */
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Reduces the step card padding */
+    .step-card {
+        padding: 24px;
+    }
+
+    /* Stacks the impact section */
+    .impact-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 5%;
+    }
+
+    /* Reduces the impact card height */
+    .impact-item {
+        min-height: 110px;
+        padding: 15px;
+    }
+
+    /* Reduces impact number size */
+    .impact-item strong {
+        font-size: 25px;
+    }
+
+    /* Stacks footer columns */
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    /* Makes the brand occupy the full footer width */
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    /* Stacks copyright information */
+    .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+/* ---------- 12. VERY SMALL PHONE SCREENS ---------- */
+
+/* Further adjusts content on narrow devices */
+@media (max-width: 380px) {
+
+    /* Stacks category cards into one column */
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gives single-column cards more image space */
+    .category-card > img {
+        height: 190px;
+    }
+
+    /* Stacks the main buttons */
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   GIVEHUB - HOW IT WORKS PAGE
+   Styles only the sections unique to this page.
+   ===================================================== */
+
+
+/* ---------- 1. PAGE HERO ---------- */
+
+.process-hero {
+    padding: 85px 7%;
+    text-align: center;
+    background: var(--cream);
+}
+
+/* Main title on the How It Works page */
+.process-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+/* Highlights the second line of the heading */
+.process-hero h1 span {
+    display: block;
+    color: var(--coral);
+}
+
+/* Introduction under the heading */
+.process-hero > p:not(.eyebrow) {
+    max-width: 660px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Centers the buttons under the introduction */
+.process-buttons {
+    justify-content: center;
+}
+
+
+/* ---------- 2. PROCESS SECTIONS ---------- */
+
+/* General spacing for each workflow section */
+.process-section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+/* Alternate background for the recipient section */
+.recipient-process {
+    background: #f8f8fa;
+}
+
+/* Heading and description for each workflow */
+.process-heading {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Small label above each workflow title */
+.process-tag {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--coral-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+/* Workflow section titles */
+.process-heading h2 {
+    margin-bottom: 14px;
+    font-size: clamp(28px, 3vw, 39px);
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+/* Workflow section descriptions */
+.process-heading > p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Creates four columns for the process cards */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Styles each process card */
+.process-card {
+    position: relative;
+    padding: 25px 21px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Adds a small lift effect on hover */
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(23, 36, 59, 0.07);
+}
+
+/* Step number in the top-right corner */
+.process-number {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    color: #c4c8d0;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* Icon block inside the process card */
+.process-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    font-size: 25px;
+}
+
+/* Process card title */
+.process-card h3 {
+    margin-bottom: 9px;
+    font-size: 16px;
+}
+
+/* Process card description */
+.process-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ---------- 3. SMART MATCHING SECTION ---------- */
+
+/* Two-column matching explanation */
+.matching-section {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+    background: var(--cream);
+}
+
+/* Matching heading */
+.matching-intro h2 {
+    max-width: 530px;
+    margin-bottom: 18px;
+    font-size: clamp(30px, 3.5vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+}
+
+/* Matching introduction paragraph */
+.matching-intro > p:not(.eyebrow) {
+    margin-bottom: 26px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Removes default bullets from the matching list */
+.matching-list {
+    list-style: none;
+    display: grid;
+    gap: 20px;
+}
+
+/* Aligns each tick with its description */
+.matching-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+/* Green tick icon */
+.matching-list li > span {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #e3f2e8;
+    color: #247b49;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Matching factor title */
+.matching-list strong {
+    font-size: 14px;
+}
+
+/* Matching factor description */
+.matching-list p {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ---------- 4. MATCHING DEMONSTRATION CARD ---------- */
+
+/* Main matching example card */
+.match-demo {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: 0 15px 40px rgba(23, 36, 59, 0.06);
+}
+
+/* Header inside the matching card */
+.match-demo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Label above the matching title */
+.demo-label {
+    color: var(--coral-dark);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* Matching card title */
+.match-demo-header h3 {
+    margin-top: 5px;
+    font-size: 19px;
+}
+
+/* Decorative symbol in the card header */
+.match-symbol {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    font-size: 24px;
+}
+
+/* Individual suggested recipient row */
+.match-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 19px 0;
+    border-bottom: 1px solid #f0ede8;
+}
+
+/* Circular letter avatar */
+.match-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Different soft avatar backgrounds */
+.avatar-one {
+    background: #ffe2d8;
+    color: #b94e35;
+}
+
+.avatar-two {
+    background: #e4e9ff;
+    color: #4058a9;
+}
+
+.avatar-three {
+    background: #e4f2e8;
+    color: #32764a;
+}
+
+/* Holds the recipient name and explanation */
+.match-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Recipient name */
+.match-details strong {
+    font-size: 12px;
+}
+
+/* Recipient explanation */
+.match-details span {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* Example matching score */
+.match-score {
+    color: #27844c;
+    font-size: 15px;
+}
+
+/* Note below the example results */
+.demo-disclaimer {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* ---------- 5. URGENCY SYSTEM ---------- */
+
+/* Urgency section background */
+.urgency-section {
+    background: var(--white);
+}
+
+/* Three urgency columns */
+.urgency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Shared urgency card style */
+.urgency-card {
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+}
+
+/* Colored circle that identifies urgency */
+.urgency-indicator {
+    display: block;
+    width: 11px;
+    height: 11px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+}
+
+/* High urgency card */
+.urgency-high {
+    background: #fff6f4;
+}
+
+.urgency-high .urgency-indicator {
+    background: #df3f3f;
+}
+
+/* Medium urgency card */
+.urgency-medium {
+    background: #fffaf0;
+}
+
+.urgency-medium .urgency-indicator {
+    background: #e5a62c;
+}
+
+/* Low urgency card */
+.urgency-low {
+    background: #f3faf4;
+}
+
+.urgency-low .urgency-indicator {
+    background: #3e9a5a;
+}
+
+/* Urgency title */
+.urgency-card h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+/* Urgency summary */
+.urgency-card > strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+/* Urgency description */
+.urgency-card p {
+    min-height: 75px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* Small label at the bottom of each urgency card */
+.urgency-label {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Priority flow sequence */
+.priority-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 38px;
+}
+
+/* Each priority flow step */
+.priority-step {
+    padding: 12px 17px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fafafa;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Down arrow between the flow steps */
+.priority-flow > span {
+    color: var(--coral-dark);
+    font-weight: 800;
+}
+
+/* Explanation of the urgency rules */
+.urgency-note {
+    max-width: 750px;
+    margin: 25px auto 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* ---------- 6. DELIVERY TIMELINE ---------- */
+
+/* Timeline container */
+.delivery-timeline {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Each timeline entry */
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+/* Draws a vertical line between the timeline points */
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 39px;
+    bottom: 0;
+    left: 17px;
+    width: 2px;
+    background: #f0c6bc;
+}
+
+/* Circular number on the timeline */
+.timeline-dot {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #f0c6bc;
+    border-radius: 50%;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* Timeline item title */
+.timeline-item h3 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/* Timeline item description */
+.timeline-item p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ---------- 7. DELIVERY INFORMATION CARD ---------- */
+
+/* Displays the delivery note horizontally */
+.delivery-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    max-width: 760px;
+    margin: 15px auto 0;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--cream);
+}
+
+/* Icon inside the delivery note */
+.delivery-note-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    background: var(--coral);
+    color: var(--white);
+    font-size: 22px;
+}
+
+/* Delivery note heading */
+.delivery-note h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+/* Delivery note description */
+.delivery-note p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ---------- 8. TABLET LAYOUT ---------- */
+
+@media (max-width: 1000px) {
+
+    /* Reduces the workflow grid to two columns */
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Reduces spacing in the matching section */
+    .matching-section {
+        gap: 30px;
+    }
+
+    /* Allows priority steps to wrap onto another row */
+    .priority-flow {
+        gap: 10px;
+    }
+}
+
+
+/* ---------- 9. MOBILE LAYOUT ---------- */
+
+@media (max-width: 700px) {
+
+    /* Reduces the hero section spacing */
+    .process-hero {
+        padding: 60px 5%;
+    }
+
+    /* Adjusts the hero title for phones */
+    .process-hero h1 {
+        font-size: clamp(34px, 9vw, 45px);
+        letter-spacing: -1.4px;
+    }
+
+    /* Stacks process buttons on narrow screens */
+    .process-buttons {
+        flex-direction: column;
+    }
+
+    .process-buttons .btn {
+        width: 100%;
+    }
+
+    /* Reduces workflow section padding */
+    .process-section {
+        padding: 55px 5%;
+    }
+
+    /* Keeps two process cards in each row */
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    /* Reduces card padding */
+    .process-card {
+        padding: 20px 15px;
+    }
+
+    /* Reduces the process title size */
+    .process-card h3 {
+        font-size: 14px;
+    }
+
+    /* Reduces process description size */
+    .process-card p {
+        font-size: 11px;
+    }
+
+    /* Stacks the matching explanation and example */
+    .matching-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* Reduces matching card padding */
+    .match-demo {
+        padding: 20px;
+    }
+
+    /* Uses one column for urgency cards */
+    .urgency-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Removes the minimum height on urgency descriptions */
+    .urgency-card p {
+        min-height: 0;
+    }
+
+    /* Stacks the priority sequence vertically */
+    .priority-flow {
+        flex-direction: column;
+    }
+
+    /* Makes each priority step fill most of the available width */
+    .priority-step {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Rotates arrows to match the vertical flow */
+    .priority-flow > span {
+        transform: rotate(90deg);
+    }
+
+    /* Reduces the delivery note padding */
+    .delivery-note {
+        padding: 18px;
+    }
+}
+
+
+/* ---------- 10. VERY SMALL SCREENS ---------- */
+
+@media (max-width: 380px) {
+
+    /* Uses one process card per row on very small phones */
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gives the cards a little more room */
+    .process-card {
+        padding: 23px;
+    }
+
+    /* Allows the match information to fit narrow screens */
+    .match-demo {
+        padding: 15px;
+    }
+
+    .match-row {
+        gap: 8px;
+    }
+
+    .match-details strong {
+        font-size: 11px;
+    }
+
+    .match-score {
+        font-size: 13px;
+    }
+}
+

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Details | GiveHub</title>
+    <link rel="stylesheet" href="css/donation-details.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="recipient-dashboard.html">Dashboard</a>
+            <a href="browse-donations.html">Browse Donations</a>
+            <a href="login.html" class="login-link">Log In</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="breadcrumb">
+            <a href="recipient-dashboard.html">Dashboard</a>
+            <span>/</span>
+            <a href="browse-donations.html">Browse Donations</a>
+            <span>/</span>
+            <span>Donation Details</span>
+        </div>
+
+        <section class="details-layout">
+
+            <!-- Donation image -->
+            <div class="image-section">
+                <img
+                    id="donationImage"
+                    src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=80"
+                    alt="Fresh vegetables available for donation"
+                >
+
+                <span class="image-label">COMMUNITY DONATION</span>
+            </div>
+
+            <!-- Donation information -->
+            <div class="information-section">
+
+                <div class="badge-row">
+                    <span class="category-badge" id="categoryBadge">Food</span>
+                    <span class="urgency-badge" id="urgencyBadge">Urgent</span>
+                </div>
+
+                <p class="eyebrow">DONATION INFORMATION</p>
+
+                <h1 id="donationTitle">Fresh Vegetables</h1>
+
+                <p class="intro">
+                    Useful resources deserve a second chance.
+                    Explore the details and request items that meet your needs.
+                </p>
+
+                <div class="donor-box">
+                    <div class="donor-avatar">GH</div>
+                    <div>
+                        <p class="small-label">Shared by</p>
+                        <h3 id="donorName">Community Food Donor</h3>
+                        <p class="verified-text">GiveHub community member</p>
+                    </div>
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-icon">📦</span>
+                        <div>
+                            <p>Quantity available</p>
+                            <strong id="quantity">8 kg</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <div>
+                            <p>Pickup location</p>
+                            <strong id="location">Jaipur, Rajasthan</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">⏳</span>
+                        <div>
+                            <p>Availability</p>
+                            <strong id="availability">Available</strong>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">🗓️</span>
+                        <div>
+                            <p>Expiry / use-by</p>
+                            <strong id="expiry">Check with donor</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description-section">
+                    <h2>About this donation</h2>
+                    <p id="description">
+                        Fresh seasonal vegetables available for families
+                        or community kitchens. Please confirm the quantity
+                        and collection arrangements before collecting.
+                    </p>
+                </div>
+
+                <div class="notice">
+                    <strong>Before you request</strong>
+                    <p>
+                        Check the item's condition, quantity, and collection
+                        requirements. For food donations, confirm freshness
+                        and safe handling with the donor.
+                    </p>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="request-resource.html" class="primary-button">
+                        Request This Resource
+                    </a>
+
+                    <a href="browse-donations.html" class="secondary-button">
+                        Back to Donations
+                    </a>
+                </div>
+
+                <p class="demo-note">
+                    Demonstration page: this listing uses sample data.
+                    No item is reserved by viewing this page.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+        <p>Connecting people through meaningful giving.</p>
+        <p class="copyright">© 2026 GiveHub · Student project demonstration</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/donation-details.js"></script>
+
+</body>
+</html>

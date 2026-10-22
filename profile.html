@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | GiveHub</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="donor-dashboard.html">Donor</a>
+            <a href="recipient-dashboard.html">Receiver</a>
+            <a href="volunteer-dashboard.html">Volunteer</a>
+            <a href="profile.html" class="active">My Profile</a>
+        </nav>
+    </header>
+
+    <section class="page-heading">
+        <p class="eyebrow">YOUR ACCOUNT</p>
+        <h1>My <span>Profile</span></h1>
+        <p>Manage your information and keep your GiveHub account up to date.</p>
+    </section>
+
+    <main class="profile-container">
+
+        <aside class="profile-sidebar">
+            <div class="avatar" id="avatar">U</div>
+            <h2 id="sidebarName">GiveHub User</h2>
+            <p id="sidebarEmail">user@example.com</p>
+
+            <span class="role-badge" id="sidebarRole">Donor</span>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="#personal-info" class="sidebar-link active">👤 Personal Information</a>
+            <a href="#account-info" class="sidebar-link">⚙️ Account Details</a>
+
+            <a href="login.html" class="logout-link">Log Out →</a>
+        </aside>
+
+        <section class="profile-content">
+
+            <div class="section-title">
+                <div>
+                    <h2>Personal Information</h2>
+                    <p>Update your basic account details below.</p>
+                </div>
+
+                <button type="button" id="editButton" class="edit-btn">
+                    Edit Profile
+                </button>
+            </div>
+
+            <form id="profileForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" value="GiveHub User" required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" value="user@example.com" required disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number"
+                               pattern="[0-9]{10}" maxlength="10" disabled>
+                        <small>Enter a 10-digit mobile number.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Account Type</label>
+                        <select id="role" disabled>
+                            <option value="Donor">Donor</option>
+                            <option value="Receiver">Receiver</option>
+                            <option value="Volunteer">Volunteer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="location">City / Location</label>
+                        <input type="text" id="location" placeholder="Enter your city or area" disabled>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="about">About Me</label>
+                        <textarea id="about" rows="4"
+                                  placeholder="Tell us a little about yourself..."
+                                  disabled></textarea>
+                    </div>
+
+                </div>
+
+                <div class="form-actions" id="formActions" hidden>
+                    <button type="button" id="cancelButton" class="cancel-btn">
+                        Cancel
+                    </button>
+                    <button type="submit" class="save-btn">
+                        Save Changes
+                    </button>
+                </div>
+
+                <p id="profileMessage" role="status"></p>
+
+            </form>
+
+            <section class="account-card" id="account-info">
+                <h2>Account Details</h2>
+
+                <div class="account-row">
+                    <span>Platform</span>
+                    <strong>GiveHub</strong>
+                </div>
+
+                <div class="account-row">
+                    <span>Account Type</span>
+                    <strong id="accountRole">Donor</strong>
+                </div>
+
+                <div class="account-row">
+                    <span>Profile Status</span>
+                    <strong class="status-text">Demo Account</strong>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="givehub.html" class="footer-logo">GiveHub</a>
+        <p>Connecting generosity with people who need it most.</p>
+        <p class="copyright">© 2026 GiveHub. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volunteer Dashboard | GiveHub</title>
+
+    <!-- Volunteer dashboard styling -->
+    <link rel="stylesheet" href="css/volunteer-dashboard.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+    <header class="topbar">
+
+        <a href="givehub.html" class="brand">
+            <span class="brand-icon">G</span>
+            <span>Give<span class="brand-highlight">Hub</span></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="about.html">About</a>
+            <a href="notifications.html">Notifications</a>
+        </nav>
+
+        <a href="login.html" class="account-btn">My Account</a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+                <p class="eyebrow">VOLUNTEER COMMUNITY</p>
+
+                <h1>Make a difference, <span>one delivery at a time.</span></h1>
+
+                <p class="welcome-description">
+                    Help donations reach the right people. Accept pickup tasks,
+                    deliver essential items, and make every contribution count.
+                </p>
+
+                <a href="#available-tasks" class="primary-btn">
+                    Explore Available Tasks →
+                </a>
+            </div>
+
+            <div class="welcome-art">
+                <div class="art-icon">📦</div>
+                <div class="art-label">
+                    <span class="art-label-icon">♥</span>
+                    Small actions. Real impact.
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Volunteer Profile -->
+        <section class="volunteer-profile">
+
+            <div class="profile-left">
+                <div class="avatar">V</div>
+
+                <div>
+                    <p class="profile-label">VOLUNTEER ACCOUNT</p>
+                    <h2>Welcome, Volunteer!</h2>
+                    <p class="profile-description">
+                        Your time and effort help build a stronger community.
+                    </p>
+                </div>
+            </div>
+
+            <div class="volunteer-badge">
+                <span>✦</span> Community Helper
+            </div>
+
+        </section>
+
+
+        <!-- Activity Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon orange">📋</div>
+                <p class="stat-label">Available Tasks</p>
+                <h2 id="availableCount">0</h2>
+                <p class="stat-note">Ready to be accepted</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">🚚</div>
+                <p class="stat-label">Active Tasks</p>
+                <h2 id="activeCount">0</h2>
+                <p class="stat-note">Tasks you have accepted</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p class="stat-label">Completed Tasks</p>
+                <h2 id="completedCount">0</h2>
+                <p class="stat-note">Successfully completed</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon blue">⭐</div>
+                <p class="stat-label">Impact Points</p>
+                <h2 id="pointsCount">0</h2>
+                <p class="stat-note">Earned through demo tasks</p>
+            </div>
+
+        </section>
+
+
+        <!-- Available Tasks -->
+        <section class="tasks-section" id="available-tasks">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">MAKE AN IMPACT</p>
+                    <h2>Volunteer Tasks</h2>
+                    <p class="section-description">
+                        Explore sample tasks and choose where you can help.
+                    </p>
+                </div>
+
+                <span class="task-counter" id="taskCounter">0 tasks</span>
+            </div>
+
+
+            <!-- Task Filters -->
+            <div class="filter-bar">
+
+                <button type="button" class="filter-btn active" data-filter="all">
+                    All Tasks
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="available">
+                    Available
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="active">
+                    My Active Tasks
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="completed">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- JavaScript inserts task cards here -->
+            <div class="tasks-grid" id="tasksGrid"></div>
+
+
+            <!-- Empty message -->
+            <div class="empty-state" id="emptyState" hidden>
+                <div class="empty-icon">📭</div>
+                <h3>No tasks in this section</h3>
+                <p>Choose another filter to explore other tasks.</p>
+
+                <button type="button" id="showAllBtn" class="secondary-btn">
+                    Show All Tasks
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- How Volunteer Points Work -->
+        <section class="points-section">
+
+            <div class="points-icon">🏆</div>
+
+            <div class="points-content">
+                <h2>Your effort creates an impact</h2>
+
+                <p>
+                    In this demo, completing a task adds impact points to your
+                    volunteer profile. A future version can use these points for
+                    certificates, recognition, or rewards.
+                </p>
+            </div>
+
+            <div class="points-highlight">
+                <span>Earn</span>
+                <strong>Points</strong>
+                <small>By helping others</small>
+            </div>
+
+        </section>
+
+
+        <!-- Quick Links -->
+        <section class="quick-links-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Quick Links</h2>
+                    <p class="section-description">
+                        Find other useful areas of GiveHub.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quick-links-grid">
+
+                <a href="notifications.html" class="quick-link-card">
+                    <span class="quick-link-icon">🔔</span>
+                    <span>
+                        <strong>Notifications</strong>
+                        <small>Check important updates</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="browse-donations.html" class="quick-link-card">
+                    <span class="quick-link-icon">🎁</span>
+                    <span>
+                        <strong>Browse Donations</strong>
+                        <small>Explore listed resources</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="donation-tracking.html" class="quick-link-card">
+                    <span class="quick-link-icon">📍</span>
+                    <span>
+                        <strong>Donation Tracking</strong>
+                        <small>View a sample tracking timeline</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+        <p>© 2026 GiveHub. Every contribution makes a difference.</p>
+    </footer>
+
+
+    <!-- Shared JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Volunteer dashboard JavaScript -->
+    <script src="js/volunteer-dashboard.js"></script>
+
+</body>
+</html>

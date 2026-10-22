@@ -1,0 +1,515 @@
+
+/* =====================================================
+   GIVEHUB ABOUT PAGE
+   All styles specific to about.html are defined here.
+   ===================================================== */
+
+
+/* ---------- 1. ABOUT HERO ---------- */
+
+.about-hero {
+    padding: 85px 7%;
+    text-align: center;
+    background: var(--cream);
+}
+
+/* Main heading */
+.about-hero h1 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    font-size: clamp(38px, 5vw, 59px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+}
+
+/* Coral highlight in the heading */
+.about-hero h1 span {
+    display: block;
+    color: var(--coral);
+}
+
+/* Hero introduction */
+.about-hero-text {
+    max-width: 680px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Centers the About page buttons */
+.about-buttons {
+    justify-content: center;
+}
+
+
+/* ---------- 2. PROBLEM SECTION ---------- */
+
+/* Creates two columns for text and photograph */
+.about-problem {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Problem heading */
+.problem-content h2 {
+    margin-bottom: 23px;
+    font-size: clamp(30px, 3.5vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+/* Problem description paragraphs */
+.problem-content > p:not(.eyebrow) {
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Image container */
+.problem-image {
+    position: relative;
+    min-width: 0;
+}
+
+/* Main problem section photograph */
+.problem-image > img {
+    height: 430px;
+    border-radius: 18px;
+}
+
+/* Caption displayed over the bottom of the photograph */
+.photo-caption {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 17px;
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 8px 25px rgba(23, 36, 59, 0.1);
+}
+
+/* Caption heading */
+.photo-caption strong {
+    font-size: 14px;
+}
+
+/* Caption description */
+.photo-caption span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ---------- 3. SOLUTION SECTION ---------- */
+
+/* Gives the solution section a subtle background */
+.solution-section {
+    background: #f8f8fa;
+}
+
+/* Three solution cards in one row */
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Individual solution card */
+.solution-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--white);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Lifts the solution card on hover */
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(23, 36, 59, 0.07);
+}
+
+/* Solution icon block */
+.solution-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 23px;
+    border-radius: 13px;
+    background: var(--soft-peach);
+    color: var(--coral-dark);
+    font-size: 28px;
+}
+
+/* Solution title */
+.solution-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+/* Solution description */
+.solution-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* ---------- 4. RESOURCE CATEGORIES ---------- */
+
+/* Four category cards in a row */
+.about-category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Category card container */
+.about-category-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Card hover effect */
+.about-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(23, 36, 59, 0.08);
+}
+
+/* Category photograph */
+.about-category-card img {
+    height: 185px;
+}
+
+/* Category text container */
+.about-category-card > div {
+    padding: 18px;
+}
+
+/* Category heading */
+.about-category-card h3 {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+/* Category description */
+.about-category-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ---------- 5. PLATFORM BENEFITS ---------- */
+
+/* Soft background separates benefits from other sections */
+.benefits-section {
+    background: var(--cream);
+}
+
+/* Two columns of benefits */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual benefit row */
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+}
+
+/* Checkmark circle */
+.benefit-check {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #e3f2e8;
+    color: #247b49;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Benefit heading */
+.benefit-item h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+/* Benefit description */
+.benefit-item p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ---------- 6. MISSION SECTION ---------- */
+
+/* Dark section makes the mission stand out */
+.mission-section {
+    padding: 85px 7%;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Centers and limits mission content */
+.mission-content {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Light coral label on the dark background */
+.mission-content .eyebrow {
+    color: #ffad98;
+}
+
+/* Mission heading */
+.mission-content h2 {
+    margin-bottom: 22px;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+/* Mission paragraphs */
+.mission-content > p:not(.eyebrow) {
+    margin-bottom: 15px;
+    color: #c7cfdb;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Adds space above the mission button */
+.mission-content .btn {
+    margin-top: 15px;
+}
+
+
+/* ---------- 7. FUTURE VISION ---------- */
+
+/* Limits the vision heading width */
+.vision-heading {
+    max-width: 690px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Vision heading title */
+.vision-heading h2 {
+    margin-bottom: 15px;
+    font-size: clamp(29px, 3.5vw, 41px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+/* Vision introduction */
+.vision-heading > p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Four vision cards */
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Individual vision card */
+.vision-card {
+    padding: 24px 20px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: var(--white);
+}
+
+/* Vision number */
+.vision-number {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--coral-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Vision card heading */
+.vision-card h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Vision card description */
+.vision-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+/* Note below the vision cards */
+.vision-note {
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+/* ---------- 8. TABLET RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 1000px) {
+
+    /* Reduces category cards to two columns */
+    .about-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Reduces vision cards to two columns */
+    .vision-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Reduces the gap between problem columns */
+    .about-problem {
+        gap: 35px;
+    }
+
+    /* Reduces photograph height */
+    .problem-image > img {
+        height: 380px;
+    }
+}
+
+
+/* ---------- 9. MOBILE RESPONSIVE DESIGN ---------- */
+
+@media (max-width: 700px) {
+
+    /* Reduces hero padding */
+    .about-hero {
+        padding: 60px 5%;
+    }
+
+    /* Adjusts heading size for mobile */
+    .about-hero h1 {
+        font-size: clamp(34px, 9vw, 45px);
+        letter-spacing: -1.4px;
+    }
+
+    /* Stacks hero buttons vertically */
+    .about-buttons {
+        flex-direction: column;
+    }
+
+    .about-buttons .btn {
+        width: 100%;
+    }
+
+    /* Stacks the problem text and image */
+    .about-problem {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Reduces problem image height */
+    .problem-image > img {
+        height: 310px;
+    }
+
+    /* Stacks solution cards */
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Reduces solution card padding */
+    .solution-card {
+        padding: 24px;
+    }
+
+    /* Keeps two category cards per row */
+    .about-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    /* Reduces category image height */
+    .about-category-card img {
+        height: 140px;
+    }
+
+    /* Reduces category text padding */
+    .about-category-card > div {
+        padding: 13px;
+    }
+
+    /* Stacks benefits in one column */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    /* Reduces mission section spacing */
+    .mission-section {
+        padding: 60px 5%;
+    }
+
+    /* Keeps two vision cards per row */
+    .vision-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    /* Reduces vision card padding */
+    .vision-card {
+        padding: 18px 14px;
+    }
+}
+
+
+/* ---------- 10. VERY SMALL PHONE SCREENS ---------- */
+
+@media (max-width: 380px) {
+
+    /* Uses one category card per row */
+    .about-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gives the category photograph more height */
+    .about-category-card img {
+        height: 190px;
+    }
+
+    /* Uses one vision card per row */
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+}

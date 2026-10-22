@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | GiveHub</title>
+
+    <!-- Admin dashboard CSS -->
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP NAVIGATION
+    ========================== -->
+    <header class="topbar">
+
+        <a href="givehub.html" class="brand">
+            <span class="brand-icon">G</span>
+            <span>Give<span class="brand-highlight">Hub</span></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="givehub.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="notifications.html">Notifications</a>
+        </nav>
+
+        <span class="admin-badge">⚙ Admin Panel</span>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN DASHBOARD
+    ========================== -->
+    <main class="admin-container">
+
+        <!-- Welcome Banner -->
+        <section class="welcome-banner">
+
+            <div class="welcome-content">
+                <p class="eyebrow">PLATFORM OVERVIEW</p>
+
+                <h1>Admin Dashboard</h1>
+
+                <p>
+                    Monitor GiveHub activity, review pending requests,
+                    and keep the donation community running smoothly.
+                </p>
+            </div>
+
+            <div class="welcome-icon">⚙️</div>
+
+        </section>
+
+
+        <!-- Summary Cards -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-label">Total Users</span>
+                    <span class="stat-icon purple">👥</span>
+                </div>
+
+                <h2 id="totalUsers">0</h2>
+                <p>Donors, receivers and volunteers</p>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-label">Total Donations</span>
+                    <span class="stat-icon orange">🎁</span>
+                </div>
+
+                <h2 id="totalDonations">0</h2>
+                <p>Listed donation records</p>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-label">Pending Requests</span>
+                    <span class="stat-icon yellow">📋</span>
+                </div>
+
+                <h2 id="pendingRequests">0</h2>
+                <p>Waiting for review</p>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span class="stat-label">Volunteers</span>
+                    <span class="stat-icon green">🤝</span>
+                </div>
+
+                <h2 id="totalVolunteers">0</h2>
+                <p>Registered volunteer records</p>
+            </article>
+
+        </section>
+
+
+        <!-- Status Overview -->
+        <section class="overview-grid">
+
+            <article class="overview-card">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">DONATION ACTIVITY</p>
+                        <h2>Donation Overview</h2>
+                    </div>
+                    <span class="overview-emoji">📦</span>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-pending"></span>
+                    <span>Pending</span>
+                    <strong id="donationPending">0</strong>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-approved"></span>
+                    <span>Matched</span>
+                    <strong id="donationMatched">0</strong>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-completed"></span>
+                    <span>Delivered</span>
+                    <strong id="donationDelivered">0</strong>
+                </div>
+            </article>
+
+
+            <article class="overview-card">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">REQUEST ACTIVITY</p>
+                        <h2>Request Overview</h2>
+                    </div>
+                    <span class="overview-emoji">📝</span>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-pending"></span>
+                    <span>Pending</span>
+                    <strong id="requestPending">0</strong>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-approved"></span>
+                    <span>Approved</span>
+                    <strong id="requestApproved">0</strong>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-dot dot-rejected"></span>
+                    <span>Rejected</span>
+                    <strong id="requestRejected">0</strong>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- Manage Requests -->
+        <section class="management-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">REVIEW AND MANAGE</p>
+                    <h2>Donation & Request Records</h2>
+                    <p class="section-description">
+                        Search sample records and review pending requests.
+                    </p>
+                </div>
+
+                <span class="record-count" id="recordCount">0 records</span>
+            </div>
+
+
+            <!-- Search and Filter Controls -->
+            <div class="toolbar">
+
+                <div class="search-box">
+                    <span>⌕</span>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search by name, item or ID..."
+                        aria-label="Search records"
+                    >
+                </div>
+
+
+                <select id="typeFilter" aria-label="Filter by record type">
+                    <option value="all">All Records</option>
+                    <option value="donation">Donations</option>
+                    <option value="request">Requests</option>
+                </select>
+
+
+                <select id="statusFilter" aria-label="Filter by status">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="matched">Matched</option>
+                    <option value="delivered">Delivered</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+
+            </div>
+
+
+            <!-- Records Table -->
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Record ID</th>
+                            <th>Type / Item</th>
+                            <th>Submitted By</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recordsTableBody">
+                        <!-- JavaScript adds rows here -->
+                    </tbody>
+                </table>
+
+            </div>
+
+
+            <!-- No Results Message -->
+            <div id="noRecords" class="no-records" hidden>
+                <div>🔎</div>
+                <h3>No matching records</h3>
+                <p>Try changing your search or filters.</p>
+
+                <button type="button" id="resetFiltersBtn">
+                    Reset Filters
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Quick Links -->
+        <section class="quick-links-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">QUICK ACCESS</p>
+                    <h2>Manage GiveHub Pages</h2>
+                </div>
+            </div>
+
+            <div class="quick-links-grid">
+
+                <a href="donor-dashboard.html" class="quick-link">
+                    <span class="quick-icon">🎁</span>
+                    <span>
+                        <strong>Donor Dashboard</strong>
+                        <small>View the donor interface</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="recipient-dashboard.html" class="quick-link">
+                    <span class="quick-icon">🙌</span>
+                    <span>
+                        <strong>Recipient Dashboard</strong>
+                        <small>View recipient activity</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="volunteer-dashboard.html" class="quick-link">
+                    <span class="quick-icon">🚚</span>
+                    <span>
+                        <strong>Volunteer Dashboard</strong>
+                        <small>View volunteer tasks</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="browse-donations.html" class="quick-link">
+                    <span class="quick-icon">📦</span>
+                    <span>
+                        <strong>Browse Donations</strong>
+                        <small>Explore donation listings</small>
+                    </span>
+                    <span class="arrow">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 GiveHub. Admin dashboard demonstration.</p>
+    </footer>
+
+
+    <!-- Shared JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Admin dashboard JavaScript -->
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

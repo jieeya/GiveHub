@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic browser settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donor Dashboard | GiveHub</title>
+
+    <!-- Dashboard-specific styling -->
+    <link rel="stylesheet" href="css/donor-dashboard.css">
+</head>
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Website logo -->
+        <a href="givehub.html" class="logo">
+            <span class="logo-icon">G</span>
+            <span>Give<span class="logo-highlight">Hub</span></span>
+        </a>
+
+        <!-- Donor navigation links -->
+        <p class="menu-heading">DONOR MENU</p>
+
+        <nav class="side-nav">
+            <a href="donor-dashboard.html" class="side-link active">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="post-donation.html" class="side-link">
+                <span>＋</span> Post a Donation
+            </a>
+
+            <a href="my-donations.html" class="side-link">
+                <span>♡</span> My Donations
+            </a>
+
+            <a href="donation-tracking.html" class="side-link">
+                <span>↗</span> Track Donations
+            </a>
+
+            <a href="notifications.html" class="side-link">
+                <span>♧</span> Notifications
+            </a>
+        </nav>
+
+        <!-- Sidebar help card -->
+        <div class="sidebar-help">
+            <div class="help-icon">✦</div>
+            <h3>Your kindness matters!</h3>
+            <p>Every useful item you share can make a difference.</p>
+            <a href="how-it-works.html">Learn how it works →</a>
+        </div>
+
+        <!-- Return to public website -->
+        <a href="givehub.html" class="back-home">← Back to website</a>
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-content">
+
+        <!-- Top bar -->
+        <header class="topbar">
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open sidebar">☰</button>
+
+            <div class="page-label">
+                <span>Workspace</span>
+                <h2>Donor Dashboard</h2>
+            </div>
+
+            <div class="topbar-actions">
+                <a href="notifications.html" class="notification-button"
+                   aria-label="Notifications">♧<span></span></a>
+
+                <div class="user-profile">
+                    <div class="avatar">D</div>
+                    <div>
+                        <strong>Donor Account</strong>
+                        <small>Resource Giver</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Dashboard welcome -->
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">YOUR IMPACT STARTS HERE</p>
+                <h1>Hello, Donor! <span>♡</span></h1>
+                <p class="welcome-text">
+                    Thank you for making a difference. Here's an overview
+                    of your contribution to the community.
+                </p>
+            </div>
+
+            <a href="post-donation.html" class="primary-button">
+                <span>＋</span> Post a Donation
+            </a>
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Total Donations</span>
+                    <span class="stat-icon coral">♡</span>
+                </div>
+                <h2>12</h2>
+                <p class="stat-note">Items shared so far</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Successfully Delivered</span>
+                    <span class="stat-icon purple">✓</span>
+                </div>
+                <h2>08</h2>
+                <p class="stat-note">Donations reached recipients</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>People Helped</span>
+                    <span class="stat-icon orange">♧</span>
+                </div>
+                <h2>24</h2>
+                <p class="stat-note">People reached by your donations</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Impact Points</span>
+                    <span class="stat-icon blue">✦</span>
+                </div>
+                <h2>340</h2>
+                <p class="stat-note">Points earned through giving</p>
+            </article>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+        <section class="dashboard-section">
+            <div class="section-title">
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>What would you like to do today?</p>
+                </div>
+            </div>
+
+            <div class="action-grid">
+
+                <a href="post-donation.html" class="action-card">
+                    <span class="action-icon coral">＋</span>
+                    <h3>Donate Resources</h3>
+                    <p>Share food, clothes, books, electronics and more.</p>
+                    <span class="action-arrow">Get started →</span>
+                </a>
+
+                <a href="my-donations.html" class="action-card">
+                    <span class="action-icon purple">♡</span>
+                    <h3>My Donations</h3>
+                    <p>View and manage the resources you've shared.</p>
+                    <span class="action-arrow">View donations →</span>
+                </a>
+
+                <a href="donation-tracking.html" class="action-card">
+                    <span class="action-icon blue">↗</span>
+                    <h3>Track Delivery</h3>
+                    <p>Check the progress of donations in transit.</p>
+                    <span class="action-arrow">Track now →</span>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- ================= RECENT DONATIONS ================= -->
+        <section class="dashboard-section">
+            <div class="section-title">
+                <div>
+                    <h2>Recent Donations</h2>
+                    <p>A quick look at your latest activity.</p>
+                </div>
+
+                <a href="my-donations.html" class="view-all">
+                    View all →
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Donation</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="donation-item">
+                                    <span class="item-emoji">🍱</span>
+                                    <span>
+                                        <strong>Fresh Food Packets</strong>
+                                        <small>10 packets</small>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>Food</td>
+                            <td>20 Oct 2026</td>
+                            <td><span class="status delivered">Delivered</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="donation-item">
+                                    <span class="item-emoji">👕</span>
+                                    <span>
+                                        <strong>Winter Clothes</strong>
+                                        <small>8 items</small>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>Clothing</td>
+                            <td>18 Oct 2026</td>
+                            <td><span class="status transit">In Transit</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="donation-item">
+                                    <span class="item-emoji">📚</span>
+                                    <span>
+                                        <strong>School Books</strong>
+                                        <small>15 books</small>
+                                    </span>
+                                </div>
+                            </td>
+                            <td>Education</td>
+                            <td>16 Oct 2026</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="demo-note">
+                Sample dashboard data for design purposes.
+            </p>
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="dashboard-footer">
+            <p>© 2026 GiveHub. Every act of kindness counts.</p>
+            <a href="about.html">About GiveHub</a>
+        </footer>
+
+    </main>
+
+    <!-- Shared navigation code -->
+    <script src="js/script.js"></script>
+
+    <!-- Dashboard-specific interactions -->
+    <script src="js/donor-dashboard.js"></script>
+
+</body>
+</html>

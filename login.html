@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on mobile and desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text displayed on the browser tab -->
+    <title>Login | GiveHub</title>
+
+    <!-- Connects this page to its separate CSS file -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <a href="givehub.html" class="logo">
+            <span class="logo-icon">G</span>
+            <span>Give<span class="logo-highlight">Hub</span></span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <!-- Main navigation links -->
+        <nav class="navbar" id="navbar">
+            <a href="givehub.html" class="nav-link">Home</a>
+            <a href="how-it-works.html" class="nav-link">How It Works</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="login.html" class="nav-link active">Login</a>
+            <a href="register.html" class="nav-register">Join GiveHub</a>
+        </nav>
+    </header>
+
+
+    <!-- ================= LOGIN SECTION ================= -->
+    <main class="login-page">
+
+        <!-- Left side: Welcome message and image -->
+        <section class="login-intro">
+            <div class="intro-content">
+                <span class="eyebrow">WELCOME TO GIVEHUB</span>
+
+                <h1>Good things happen when we <span>share.</span></h1>
+
+                <p>
+                    Log in to connect with your community, share useful
+                    resources, and help make a real difference.
+                </p>
+
+                <!-- Benefits shown on the left side -->
+                <div class="login-benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">♡</span>
+                        <div>
+                            <h3>Give with purpose</h3>
+                            <p>Share resources with people who need them.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="benefit-icon">↗</span>
+                        <div>
+                            <h3>Track your impact</h3>
+                            <p>Follow your donations and delivery updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <span class="benefit-icon">✦</span>
+                        <div>
+                            <h3>Be part of change</h3>
+                            <p>Help build a more supportive community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Right side: Login form -->
+        <section class="login-form-section">
+            <div class="login-card">
+
+                <div class="form-heading">
+                    <span class="form-icon">G</span>
+                    <h2>Welcome back!</h2>
+                    <p>Enter your details to access your account.</p>
+                </div>
+
+                <!-- The form is currently frontend-only -->
+                <form id="loginForm">
+
+                    <!-- Email input -->
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-group">
+                        <div class="password-label">
+                            <label for="password">Password</label>
+                            <a href="#" id="forgotPassword">Forgot password?</a>
+                        </div>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <!-- Button to show or hide the password -->
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="toggle-password"
+                            >
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember me checkbox -->
+                    <label class="remember-option">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+
+                    <!-- Login submission button -->
+                    <button type="submit" class="login-button">
+                        Log In <span>→</span>
+                    </button>
+
+                    <!-- JavaScript displays messages here -->
+                    <p id="formMessage" class="form-message"
+                       aria-live="polite"></p>
+                </form>
+
+                <!-- Link to the registration page -->
+                <p class="register-prompt">
+                    New to GiveHub?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+                <p class="security-note">
+                    Your journey towards making a difference starts here.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="login-footer">
+        <p>© 2026 GiveHub. Connecting kindness with need.</p>
+        <a href="about.html">Learn about our mission</a>
+    </footer>
+
+
+    <!-- Connects the shared JavaScript file -->
+    <script src="js/script.js"></script>
+
+    <!-- Connects JavaScript specific to the login page -->
+    <script src="js/login.js"></script>
+
+</body>
+</html>

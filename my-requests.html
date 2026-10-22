@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Requests | GiveHub</title>
+    <link rel="stylesheet" href="css/my-requests.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="recipient-dashboard.html">Dashboard</a>
+            <a href="browse-donations.html">Browse Donations</a>
+            <a href="login.html" class="login-link">Log In</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">RECIPIENT ACCOUNT</p>
+                <h1>My <span>Requests</span></h1>
+                <p>Keep track of the resources you have requested through GiveHub.</p>
+            </div>
+
+            <a href="request-resource.html" class="primary-button">
+                + New Request
+            </a>
+        </section>
+
+        <!-- Request summary cards -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon peach">▤</div>
+                <div>
+                    <p>Total Requests</p>
+                    <h2 id="totalCount">3</h2>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon yellow">◷</div>
+                <div>
+                    <p>Pending</p>
+                    <h2 id="pendingCount">1</h2>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon blue">✓</div>
+                <div>
+                    <p>Approved</p>
+                    <h2 id="approvedCount">1</h2>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon pink">↗</div>
+                <div>
+                    <p>Completed</p>
+                    <h2 id="completedCount">1</h2>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Filters -->
+        <section class="requests-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Request History</h2>
+                    <p>Review your requests and their latest statuses.</p>
+                </div>
+
+                <select id="statusFilter" aria-label="Filter requests by status">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="completed">Completed</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </div>
+
+            <!-- Request 1 -->
+            <article class="request-card" data-status="pending">
+
+                <div class="request-symbol food-symbol">F</div>
+
+                <div class="request-main">
+                    <div class="request-title-row">
+                        <h3>Food Packets</h3>
+                        <span class="status pending">Pending</span>
+                    </div>
+
+                    <p class="request-category">Category: Food</p>
+
+                    <div class="request-meta">
+                        <span>Quantity: 5 packets</span>
+                        <span>Location: Jaipur</span>
+                        <span>Request ID: GH-R001</span>
+                    </div>
+
+                    <p class="request-date">Submitted: 20 October 2026</p>
+                </div>
+
+                <div class="request-actions">
+                    <button class="view-button"
+                        data-title="Food Packets"
+                        data-id="GH-R001"
+                        data-category="Food"
+                        data-quantity="5 packets"
+                        data-location="Jaipur"
+                        data-status="Pending"
+                        data-date="20 October 2026">
+                        View Details
+                    </button>
+                </div>
+
+            </article>
+
+            <!-- Request 2 -->
+            <article class="request-card" data-status="approved">
+
+                <div class="request-symbol books-symbol">B</div>
+
+                <div class="request-main">
+                    <div class="request-title-row">
+                        <h3>School Textbooks</h3>
+                        <span class="status approved">Approved</span>
+                    </div>
+
+                    <p class="request-category">Category: Books</p>
+
+                    <div class="request-meta">
+                        <span>Quantity: 4 books</span>
+                        <span>Location: Jaipur</span>
+                        <span>Request ID: GH-R002</span>
+                    </div>
+
+                    <p class="request-date">Submitted: 18 October 2026</p>
+                </div>
+
+                <div class="request-actions">
+                    <button class="view-button"
+                        data-title="School Textbooks"
+                        data-id="GH-R002"
+                        data-category="Books"
+                        data-quantity="4 books"
+                        data-location="Jaipur"
+                        data-status="Approved"
+                        data-date="18 October 2026">
+                        View Details
+                    </button>
+                </div>
+
+            </article>
+
+            <!-- Request 3 -->
+            <article class="request-card" data-status="completed">
+
+                <div class="request-symbol clothes-symbol">C</div>
+
+                <div class="request-main">
+                    <div class="request-title-row">
+                        <h3>Winter Clothes</h3>
+                        <span class="status completed">Completed</span>
+                    </div>
+
+                    <p class="request-category">Category: Clothes</p>
+
+                    <div class="request-meta">
+                        <span>Quantity: 3 pieces</span>
+                        <span>Location: Jaipur</span>
+                        <span>Request ID: GH-R003</span>
+                    </div>
+
+                    <p class="request-date">Submitted: 15 October 2026</p>
+                </div>
+
+                <div class="request-actions">
+                    <button class="view-button"
+                        data-title="Winter Clothes"
+                        data-id="GH-R003"
+                        data-category="Clothes"
+                        data-quantity="3 pieces"
+                        data-location="Jaipur"
+                        data-status="Completed"
+                        data-date="15 October 2026">
+                        View Details
+                    </button>
+                </div>
+
+            </article>
+
+            <div id="emptyState" class="empty-state" hidden>
+                <h3>No requests found</h3>
+                <p>There are no requests matching this status.</p>
+                <button id="resetFilter" class="primary-button">
+                    Show All Requests
+                </button>
+            </div>
+
+        </section>
+
+        <section class="help-banner">
+            <div>
+                <h2>Need something else?</h2>
+                <p>Explore available donations or submit another resource request.</p>
+            </div>
+            <a href="browse-donations.html" class="secondary-button">
+                Browse Donations
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Request details popup -->
+    <div class="modal-overlay" id="requestModal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true"
+            aria-labelledby="modalTitle">
+
+            <button id="closeModal" class="modal-close"
+                aria-label="Close popup">&times;</button>
+
+            <p class="eyebrow">REQUEST INFORMATION</p>
+            <h2 id="modalTitle">Request Details</h2>
+
+            <div class="modal-details">
+                <p><strong>Request ID:</strong> <span id="modalId"></span></p>
+                <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+                <p><strong>Quantity:</strong> <span id="modalQuantity"></span></p>
+                <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+                <p><strong>Status:</strong> <span id="modalStatus"></span></p>
+                <p><strong>Submitted:</strong> <span id="modalDate"></span></p>
+            </div>
+
+            <p class="demo-note">
+                This is sample request history for demonstration purposes.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+        <p>Connecting people through meaningful giving.</p>
+        <p class="copyright">© 2026 GiveHub · Student project demonstration</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/my-requests.js"></script>
+
+</body>
+</html>
+

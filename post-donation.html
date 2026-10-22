@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Post a Donation | GiveHub</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="css/post-donation.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+        <a href="givehub.html" class="logo">Give<span>Hub</span></a>
+
+        <nav>
+            <a href="givehub.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="donor-dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Page heading -->
+    <section class="page-heading">
+        <p class="eyebrow">MAKE A DIFFERENCE</p>
+        <h1>Give What You Can. <span>Change a Life.</span></h1>
+        <p>
+            Share useful resources with people who need them.
+            Every donation can make a difference.
+        </p>
+    </section>
+
+    <!-- Donation form -->
+    <main class="donation-container">
+
+        <form id="donationForm">
+
+            <h2>Donation Details</h2>
+            <p class="form-description">
+                Tell us about the items you want to donate.
+            </p>
+
+            <div class="form-group">
+                <label for="itemName">Donation Title *</label>
+                <input
+                    type="text"
+                    id="itemName"
+                    placeholder="e.g. Freshly prepared meals"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="category">Select Category *</label>
+                <select id="category" required>
+                    <option value="">Choose a category</option>
+                    <option value="Food">Food</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Books">Books</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Household Items">Household Items</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input
+                        type="number"
+                        id="quantity"
+                        min="1"
+                        placeholder="e.g. 10"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="unit">Unit *</label>
+                    <select id="unit" required>
+                        <option value="">Select unit</option>
+                        <option value="Items">Items</option>
+                        <option value="Meals">Meals</option>
+                        <option value="Kilograms">Kilograms</option>
+                        <option value="Boxes">Boxes</option>
+                        <option value="Sets">Sets</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description *</label>
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Describe the condition and details of your donation..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Pickup Location *</label>
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter area, city or pickup address"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="expiry">Expiry / Use-By Date (if applicable)</label>
+                <input type="date" id="expiry">
+                <small>
+                    Especially important for food and other perishable items.
+                </small>
+            </div>
+
+            <div class="form-group">
+                <label for="urgency">How Urgent Is This Donation?</label>
+                <select id="urgency">
+                    <option value="Normal">Normal</option>
+                    <option value="High">High — collect soon</option>
+                    <option value="Critical">Critical — needs immediate collection</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload Donation Photo</label>
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*"
+                >
+                <small>Choose a clear photo of the donated items.</small>
+            </div>
+
+            <button type="submit" class="submit-button">
+                Submit Donation →
+            </button>
+
+            <p id="formMessage" aria-live="polite"></p>
+
+        </form>
+
+        <!-- Helpful information -->
+        <aside class="donation-tip">
+            <div class="tip-icon">♡</div>
+            <h3>Your donation matters</h3>
+            <p>
+                Items in good condition can support families,
+                students, shelters and community organisations.
+            </p>
+
+            <div class="tip-divider"></div>
+
+            <h4>Before submitting</h4>
+            <ul>
+                <li>Describe your items honestly.</li>
+                <li>Provide an accurate pickup location.</li>
+                <li>Check food safety and expiry details.</li>
+                <li>Upload a clear photo when possible.</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 GiveHub. Small acts, meaningful change.</p>
+    </footer>
+
+    <!-- Connect JavaScript files -->
+    <script src="js/script.js"></script>
+    <script src="js/post-donation.js"></script>
+
+</body>
+</html>
